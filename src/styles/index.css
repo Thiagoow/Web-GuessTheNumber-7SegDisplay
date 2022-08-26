@@ -1,0 +1,25 @@
+/*========== APP Styles ==========*/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.SevenSegments {
+  display: flex;
+  flex-direction: row;
+}
+
+.header h1 {
+  text-transform: uppercase;
+  font-size: var(--h2-font-size);
+}
+
+/*========== Media Queries ==========*/
+@media (min-width: 640px) {
+  .header h1 {
+    font-size: var(--h1-font-size);
+  }
+}
