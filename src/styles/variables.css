@@ -31,4 +31,18 @@
   /*-- Border Radius: */
   --border-outside-radius: 12px;
   --border-inside-radius: 4px;
+
+  /*-- Segment Margins: */
+  --padding-p: 4px;
+  --bar-w: 16px;
+  --bar-pad: 8px;
+  --padding: calc(var(--padding-p) * 2);
+  --bar-h: calc(var(--bar-w) * 4);
+  --bar-r: calc(var(--bar-w) / 2);
+  --bar-p: calc(var(--padding-p) + var(--bar-w));
+  --bar-p-t: calc(var(--bar-p) * 2);
+  --c-w: calc(var(--bar-p-t) + var(--bar-h));
+  --bar-h-t: calc(var(--bar-h) * 2);
+  --c-h-np: calc(var(--bar-p-t) + var(--bar-h-t));
+  --c-h: calc(calc(var(--c-h-np) + var(--padding-p)) + var(--bar-pad));
 }
