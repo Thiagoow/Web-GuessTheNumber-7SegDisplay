@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prova - Studio Sol</title>
+    <!--=========== Favicon ===========-->
+    <link rel="icon" href="./assets/favicon.png" />
+
+    <!--=========== CSS Files ===========-->
+    <link rel="stylesheet" href="./src/styles/variables.css" />
+    <link rel="stylesheet" href="./src/styles/resetBase.css" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Qual é o número?</h1>
+        <hr />
+      </header>
+
+      <section class="inputNumber">
+        <input
+          required
+          type="text"
+          id="sendValue"
+          placeholder="Digite o palpite"
+        />
+        <button id="sendBtn">Enviar</button>
+      </section>
+    </main>
+    <!--=========== APP Scripts ===========-->
+    <script src="./src/app/setDisplay.js"></script>
+  </body>
+</html>
