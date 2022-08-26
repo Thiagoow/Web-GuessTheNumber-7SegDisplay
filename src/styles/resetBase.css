@@ -1,0 +1,64 @@
+/*========== CSS Reset ==========*/
+h1,
+h2,
+h3 {
+  font-family: var(--bodyFont);
+  color: var(--firstColor);
+  font-weight: var(--wgt-semi-bold);
+}
+ul {
+  list-style: none;
+}
+a {
+  color: var(--activeNumColor);
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+  border: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*========== Base Layout ==========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+body {
+  background: var(--bodyColor);
+  color: var(--activeNumColor);
+}
+button,
+input {
+  padding: 0.6rem;
+  font-family: var(--inputBtnFont);
+  font-size: var(--small-font-size);
+  border-radius: var(--border-inside-radius);
+}
+button {
+  text-transform: uppercase;
+  background: var(--firstColor);
+  color: var(--btnTxtColor);
+}
+input {
+  border: 1px var(--inactiveNumColor) solid;
+  color: var(--placeholderColor);
+}
+input:valid {
+  border: 1px var(--firstColor) solid;
+  color: var(--activeNumColor);
+}
