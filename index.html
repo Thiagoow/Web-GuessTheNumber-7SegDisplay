@@ -10,6 +10,7 @@
     <!--=========== CSS Files ===========-->
     <link rel="stylesheet" href="./src/styles/variables.css" />
     <link rel="stylesheet" href="./src/styles/resetBase.css" />
+    <link rel="stylesheet" href="./src/styles/sevenSeg.css" />
     <link rel="stylesheet" href="./src/styles/index.css" />
   </head>
 
@@ -19,6 +20,39 @@
         <h1>Qual é o número?</h1>
         <hr />
       </header>
+
+      <section class="SevenSegments">
+        <div class="sevSegDisplay">
+          <input value="" id="hundred" hidden />
+          <seg></seg>
+          <seg></seg>
+          <seg></seg>
+          <seg></seg>
+          <seg></seg>
+          <seg></seg>
+          <seg></seg>
+        </div>
+        <div class="sevSegDisplay">
+          <input value="" id="ten" hidden />
+          <seg></seg>
+          <seg></seg>
+          <seg></seg>
+          <seg></seg>
+          <seg></seg>
+          <seg></seg>
+          <seg></seg>
+        </div>
+        <div class="sevSegDisplay">
+          <input value="" id="unit" hidden />
+          <seg></seg>
+          <seg></seg>
+          <seg></seg>
+          <seg></seg>
+          <seg></seg>
+          <seg></seg>
+          <seg></seg>
+        </div>
+      </section>
 
       <section class="inputNumber">
         <input
