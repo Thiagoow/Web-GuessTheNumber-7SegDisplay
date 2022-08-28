@@ -5,7 +5,7 @@ async function getRandomNumber() {
   try {
     const response = await fetch(API_URL)
     const data = await response.json()
-    return data.value
+    return data.value || data
   } catch (error) {
     console.log(error)
   }
