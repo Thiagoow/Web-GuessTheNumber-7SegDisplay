@@ -21,5 +21,3 @@ if (typeof randomNumber === 'object') {
 } else {
   console.log(randomNumber)
 }
-
-//Maior ou menor em inglÊs:
