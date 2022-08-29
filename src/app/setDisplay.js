@@ -2,7 +2,14 @@ import { domElements } from './domElements.js'
 const { sendValue, sendBtn } = domElements
 let { hundred, ten, unit } = domElements
 
-function setDisplayValue() {
+export function setErrorValue(statusCode) {
+  const errorArray = statusCode.toString().split('')
+  hundred.defaultValue = errorArray[0]
+  ten.defaultValue = errorArray[1]
+  unit.defaultValue = errorArray[2]
+}
+
+function setInputValue() {
   const num = sendValue.value
   let numArray = num.toString().split('')
 
