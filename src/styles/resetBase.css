@@ -2,7 +2,7 @@
 h1,
 h2,
 h3 {
-  font-family: var(--bodyFont);
+  font-family: var(--body-font);
   color: var(--firstColor);
   font-weight: var(--wgt-semi-bold);
 }
@@ -45,7 +45,7 @@ body {
 button,
 input {
   padding: 0.6rem;
-  font-family: var(--inputBtnFont);
+  font-family: var(--input-btn-font);
   font-size: var(--small-font-size);
   border-radius: var(--border-inside-radius);
 }

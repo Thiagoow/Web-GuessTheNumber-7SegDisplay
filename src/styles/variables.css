@@ -16,8 +16,8 @@
   --btnBgColor: linear-gradient(180deg, #434854 0%, #9e9e9e 100%);
 
   /*-- Font and Typography: */
-  --bodyFont: 'Montserrat', sans-serif;
-  --inputBtnFont: 'Roboto', sans-serif;
+  --body-font: 'Montserrat', sans-serif;
+  --input-btn-font: 'Roboto', sans-serif;
   --h1-font-size: 2.25rem;
   --h2-font-size: 1.5rem;
   --normal-font-size: 1rem;
