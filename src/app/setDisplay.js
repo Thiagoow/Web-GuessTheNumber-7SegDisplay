@@ -1,5 +1,5 @@
 import { domElements } from './domElements.js'
-const { sendValue, sendBtn } = domElements
+const { guessInput, sendBtn } = domElements
 let { hundred, ten, unit } = domElements
 
 export function setErrorValue(statusCode) {
@@ -10,7 +10,7 @@ export function setErrorValue(statusCode) {
 }
 
 function setInputValue() {
-  const num = sendValue.value
+  const num = guessInput.value
   let numArray = num.toString().split('')
 
   /* Delete all 0's in front of 

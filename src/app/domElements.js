@@ -1,5 +1,5 @@
 export const domElements = {
-  sendValue: document.querySelector('#sendValue'),
+  guessInput: document.querySelector('#guessInput'),
   sendBtn: document.querySelector('#sendBtn'),
 
   //7 segment displays:
