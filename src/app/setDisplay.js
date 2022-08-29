@@ -1,14 +1,10 @@
-const sendValue = document.querySelector('#sendValue')
-const sendBtn = document.querySelector('#sendBtn')
-
-//7 segment displays:
-let hundred = document.getElementById('hundred')
-let ten = document.getElementById('ten')
-let unit = document.getElementById('unit')
+import { domElements } from './domElements.js'
+const { sendValue, sendBtn } = domElements
+let { hundred, ten, unit } = domElements
 
 function setDisplayValue() {
   const num = sendValue.value
-  let numArray = num.split('')
+  let numArray = num.toString().split('')
 
   /* Delete all 0's in front of 
   the first non-zero number: */
@@ -37,4 +33,4 @@ function setDisplayValue() {
   }
 }
 
-sendBtn.addEventListener('click', setDisplayValue)
+sendBtn.addEventListener('click', setInputValue)
