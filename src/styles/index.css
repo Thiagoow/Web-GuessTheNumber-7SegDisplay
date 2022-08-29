@@ -17,6 +17,18 @@
   font-size: var(--h2-font-size);
 }
 
+#guessStatus {
+  color: var(--firstColor);
+  font-weight: var(--wgt-semi-bold);
+}
+
+.rightGuess {
+  color: var(--yeyNumColor) !important;
+}
+.appError {
+  color: var(--errorNumColor) !important;
+}
+
 /*========== Media Queries ==========*/
 @media (min-width: 640px) {
   .header h1 {
