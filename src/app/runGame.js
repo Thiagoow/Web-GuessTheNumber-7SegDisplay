@@ -39,6 +39,7 @@ function restartGame() {
 
 function startGame() {
   const guess = Number(guessInput.value)
+  threeDisplays[2].classList.remove('none')
   restartGame()
 
   if (guess.length !== 0) {
