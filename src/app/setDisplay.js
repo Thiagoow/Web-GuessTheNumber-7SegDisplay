@@ -32,6 +32,7 @@ function setInputValue() {
     case 2:
       hundred.defaultValue = ''
       threeDisplays[0].classList.add('none')
+      threeDisplays[1].classList.remove('none')
       ten.defaultValue = numArray[0]
       unit.defaultValue = numArray[1]
       break
