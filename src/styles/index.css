@@ -23,17 +23,10 @@
 }
 
 /*========== Status & Display Variants ==========*/
-.segAppError {
-  background: var(--errorNumColor) !important;
-}
-.labelAppError {
+.appError {
   color: var(--errorNumColor) !important;
 }
-
-.segRightGuess {
-  background: var(--yeyNumColor) !important;
-}
-.labelRightGuess {
+.rightGuess {
   color: var(--yeyNumColor) !important;
 }
 
