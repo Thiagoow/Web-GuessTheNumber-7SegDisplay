@@ -35,6 +35,9 @@
 .rightGuess {
   color: var(--yeyNumColor) !important;
 }
+.none {
+  display: none;
+}
 
 /*========== Media Queries ==========*/
 @media (min-width: 640px) {
