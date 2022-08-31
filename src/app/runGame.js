@@ -1,5 +1,13 @@
 import { domElements } from './domElements.js'
-const { guessInput, sendBtn, guessStatus, root, rootStyles } = domElements
+const {
+  threeDisplays,
+  ten,
+  guessInput,
+  sendBtn,
+  guessStatus,
+  root,
+  rootStyles
+} = domElements
 
 import getRandomNumber from './fetchAPI.js'
 const randomNumber = await getRandomNumber()
@@ -8,12 +16,19 @@ import { setErrorValue } from './setDisplay.js'
 if (typeof randomNumber === 'object') {
   errorHappened()
 } else {
+  emptyDisplay()
   sendBtn.addEventListener('click', startGame)
+}
+
+function emptyDisplay() {
+  threeDisplays[0].classList.add('none')
+  ten.defaultValue = 0
+  threeDisplays[2].classList.add('none')
 }
 
 function errorHappened() {
   changeDisplayColor('appError')
-  guessStatus.textContent = `Erro - ${randomNumber.Error}`
+  guessStatus.textContent = `ERRO - ${randomNumber.Error}`
   setErrorValue(randomNumber.StatusCode)
 }
 
