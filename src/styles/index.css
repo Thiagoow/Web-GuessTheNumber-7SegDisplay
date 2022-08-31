@@ -22,11 +22,19 @@
   font-weight: var(--wgt-semi-bold);
 }
 
-.rightGuess {
-  color: var(--yeyNumColor) !important;
+/*========== Status & Display Variants ==========*/
+.segAppError {
+  background: var(--errorNumColor) !important;
 }
-.appError {
+.labelAppError {
   color: var(--errorNumColor) !important;
+}
+
+.segRightGuess {
+  background: var(--yeyNumColor) !important;
+}
+.labelRightGuess {
+  color: var(--yeyNumColor) !important;
 }
 
 /*========== Media Queries ==========*/
