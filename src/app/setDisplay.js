@@ -1,6 +1,6 @@
 import { domElements } from './domElements.js'
 const { guessInput, sendBtn } = domElements
-let { hundred, ten, unit } = domElements
+let { hundred, ten, unit, threeDisplays } = domElements
 
 export function setErrorValue(statusCode) {
   const errorArray = statusCode.toString().split('')
@@ -24,10 +24,15 @@ function setInputValue() {
       hundred.defaultValue = numArray[0]
       ten.defaultValue = numArray[1]
       unit.defaultValue = numArray[2]
+
+      for (let display of threeDisplays) {
+        display.classList.remove('none')
+      }
       break
 
     case 2:
       hundred.defaultValue = ''
+      threeDisplays[0].classList.add('none')
       ten.defaultValue = numArray[0]
       unit.defaultValue = numArray[1]
       break
@@ -36,6 +41,10 @@ function setInputValue() {
       hundred.defaultValue = ''
       ten.defaultValue = ''
       unit.defaultValue = numArray[0]
+
+      for (let i = 0; i < 2; i++) {
+        threeDisplays[i].classList.add('none')
+      }
       break
   }
 }
