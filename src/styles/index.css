@@ -22,6 +22,12 @@
   font-weight: var(--wgt-semi-bold);
 }
 
+#newGameBtn {
+  display: none;
+  align-items: center;
+  background: var(--btnBgColor);
+}
+
 /*========== Status & Display Variants ==========*/
 .appError {
   color: var(--errorNumColor) !important;
