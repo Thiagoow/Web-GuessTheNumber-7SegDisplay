@@ -11,7 +11,13 @@ function errorHappened() {
   setErrorValue(randomNumber.StatusCode)
 }
 
+function restartGame() {
+  guessStatus.removeAttribute('class')
+}
+
 function startGame() {
+  restartGame()
+
   if (guessInput.value.length !== 0) {
     if (randomNumber > guessInput.value) {
       guessStatus.textContent = 'É maior'
