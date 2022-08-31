@@ -1,4 +1,5 @@
 export const domElements = {
+  guessStatus: document.querySelector('#guessStatus'),
   guessInput: document.querySelector('#guessInput'),
   sendBtn: document.querySelector('#sendBtn'),
 
@@ -6,6 +7,7 @@ export const domElements = {
   hundred: document.getElementById('hundred'),
   ten: document.getElementById('ten'),
   unit: document.getElementById('unit'),
-
-  guessStatus: document.querySelector('#guessStatus')
+  //To change segment colors:
+  rootStyles: getComputedStyle(document.querySelector(':root')),
+  root: document.querySelector(':root')
 }
