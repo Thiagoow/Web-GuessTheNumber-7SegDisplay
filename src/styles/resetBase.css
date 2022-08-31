@@ -39,7 +39,7 @@ textarea {
   font-size: var(--normal-font-size);
 }
 body {
-  background: var(--bodyColor);
+  background-color: var(--bodyColor);
   color: var(--activeNumColor);
 }
 button,
@@ -51,7 +51,7 @@ input {
 }
 button {
   text-transform: uppercase;
-  background: var(--firstColor);
+  background-color: var(--firstColor);
   color: var(--btnTxtColor);
 }
 input {
