@@ -7,7 +7,7 @@ import { setErrorValue } from './setDisplay.js'
 
 function errorHappened() {
   guessStatus.textContent = `Erro - ${randomNumber.Error}`
-  guessStatus.classList.add('appError')
+  guessStatus.classList.add('labelAppError')
   setErrorValue(randomNumber.StatusCode)
 }
 
@@ -19,7 +19,7 @@ function startGame() {
       guessStatus.textContent = 'É menor'
     } else {
       guessStatus.textContent = 'Você acertou!!!!'
-      guessStatus.classList.add('rightGuess')
+      guessStatus.classList.add('labelRightGuess')
     }
   }
 }
