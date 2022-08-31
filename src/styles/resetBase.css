@@ -53,6 +53,7 @@ button {
   text-transform: uppercase;
   background-color: var(--firstColor);
   color: var(--btnTxtColor);
+  font-weight: 500;
 }
 input {
   border: 1px var(--inactiveNumColor) solid;
