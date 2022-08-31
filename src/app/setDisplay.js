@@ -13,9 +13,8 @@ function setInputValue() {
   const num = guessInput.value
   let numArray = num.toString().split('')
 
-  /* Delete all 0's in front of 
-  the first non-zero number: */
-  while (numArray[0] === '0') {
+  /* Delete all 0's until the first non-0 number if more than 2 digits */
+  while (numArray[0] === '0' && numArray.length > 1) {
     numArray.shift()
   }
 
