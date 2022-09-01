@@ -23,7 +23,7 @@
 }
 
 #newGameBtn {
-  display: none;
+  display: flex;
   align-items: center;
   background: var(--btnBgColor);
 }
@@ -36,7 +36,18 @@
   color: var(--yeyNumColor) !important;
 }
 .none {
-  display: none;
+  display: none !important;
+}
+.disabledBtn {
+  color: var(--btnTxtColor);
+  background-color: var(--inactiveNumColor);
+  pointer-events: none;
+}
+.disabledInput {
+  color: var(--placeholderColor) !important;
+  background-color: #f5f5f5;
+  border: 1px solid var(--placeholderColor) !important;
+  pointer-events: none;
 }
 
 /*========== Media Queries ==========*/
