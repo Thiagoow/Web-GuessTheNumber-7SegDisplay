@@ -46,7 +46,7 @@ button,
 input {
   padding: 0.6rem;
   font-family: var(--input-btn-font);
-  font-size: var(--small-font-size);
+  font-size: var(--normal-font-size);
   border-radius: var(--border-inside-radius);
 }
 button {
