@@ -47,6 +47,9 @@
   position: absolute;
   bottom: 3.2rem;
 }
+#sendBtn {
+  margin-left: 0.5rem;
+}
 
 /*========== Status & Display Variants ==========*/
 .appError {
