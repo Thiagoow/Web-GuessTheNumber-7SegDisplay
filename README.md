@@ -1,6 +1,6 @@
 <!-- -->
 <div align="center">
-<img src="./public/app.jpg" align="center">
+<img src="./docs/app.jpg" align="center">
 </div>
 
 # GuessTheNumber - Studio Sol 7 Segments Display 📟👨🏻‍💻
