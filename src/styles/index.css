@@ -4,12 +4,9 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100vh;
-}
+  height: 100%;
 
-.SevenSegments {
-  display: flex;
-  flex-direction: row;
+  margin-top: 3.875rem;
 }
 
 .header h1 {
@@ -17,15 +14,38 @@
   font-size: var(--h2-font-size);
 }
 
+.header hr {
+  border: none;
+  width: 50%;
+  margin: 0.75rem auto;
+  border: 1px solid #cfcfcf;
+}
+
 #guessStatus {
+  margin-top: 5rem;
   color: var(--firstColor);
   font-weight: var(--wgt-semi-bold);
 }
 
+.SevenSegments {
+  margin-top: 2.2rem;
+  display: flex;
+  flex-direction: row;
+}
+
 #newGameBtn {
   display: flex;
+  margin-top: 3.5rem;
   align-items: center;
   background: var(--btnBgColor);
+}
+#newGameBtn img {
+  margin-right: 2px;
+}
+
+.inputNumber {
+  position: absolute;
+  bottom: 3.2rem;
 }
 
 /*========== Status & Display Variants ==========*/
@@ -51,8 +71,26 @@
 }
 
 /*========== Media Queries ==========*/
-@media (min-width: 640px) {
+@media (min-width: 720px) {
+  .container {
+    margin-top: 2.75rem;
+  }
   .header h1 {
     font-size: var(--h1-font-size);
+  }
+  .header hr {
+    margin: 1rem auto;
+  }
+  #guessStatus {
+    margin-top: 3rem;
+  }
+  #newGameBtn {
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+    background: var(--btnBgColor);
+  }
+  .inputNumber {
+    bottom: 4.8rem;
   }
 }
