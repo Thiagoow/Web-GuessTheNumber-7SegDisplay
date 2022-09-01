@@ -9,6 +9,7 @@ export const domElements = {
   ten: document.getElementById('ten'),
   unit: document.getElementById('unit'),
 
+  newGameBtn: document.querySelector('#newGameBtn'),
   //To change segment colors:
   rootStyles: getComputedStyle(document.querySelector(':root')),
   root: document.querySelector(':root')
