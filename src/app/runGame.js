@@ -1,3 +1,5 @@
+import getRandomNumber from './fetchAPI.js'
+import { setErrorValue } from './setDisplay.js'
 import { domElements } from './domElements.js'
 const {
   threeDisplays,
@@ -6,34 +8,56 @@ const {
   sendBtn,
   guessStatus,
   root,
-  rootStyles
+  rootStyles,
+  newGameBtn
 } = domElements
 
-import getRandomNumber from './fetchAPI.js'
-const randomNumber = await getRandomNumber()
-import { setErrorValue } from './setDisplay.js'
+let randomNumber = await getRandomNumber()
 
 if (typeof randomNumber === 'object') {
   errorHappened()
 } else {
   emptyDisplay()
   sendBtn.addEventListener('click', startGame)
+  newGameBtn.addEventListener('click', startNew)
 }
 
 function emptyDisplay() {
+  guessInput.value = ''
   threeDisplays[0].classList.add('none')
   ten.defaultValue = 0
   threeDisplays[2].classList.add('none')
 }
 
+async function startNew() {
+  restartGame()
+  emptyDisplay()
+  guessStatus.textContent = ''
+  setDisplayColor('active')
+  randomNumber = await getRandomNumber()
+}
+
+function disabledBtnInput() {
+  newGameBtn.classList.remove('none')
+  sendBtn.classList.add('disabledBtn')
+  guessInput.classList.add('disabledInput')
+}
+
 function errorHappened() {
-  changeDisplayColor('appError')
+  disabledBtnInput()
+  setDisplayColor('appError')
   guessStatus.textContent = `ERRO - ${randomNumber.Error}`
   setErrorValue(randomNumber.StatusCode)
+
+  newGameBtn.addEventListener('click', () => {
+    location.reload()
+  })
 }
 
 function restartGame() {
-  guessInput.value = ''
+  sendBtn.removeAttribute('class')
+  newGameBtn.classList.add('none')
+  guessInput.removeAttribute('class')
   guessStatus.removeAttribute('class')
 }
 
@@ -48,13 +72,17 @@ function startGame() {
     } else if (randomNumber < guess) {
       guessStatus.textContent = 'É menor'
     } else {
-      changeDisplayColor('rightGuess')
+      disabledBtnInput()
+      guessInput.value = ''
+      setDisplayColor('rightGuess')
       guessStatus.textContent = 'Você acertou!!!!'
     }
   }
 }
 
-function changeDisplayColor(status) {
+const defaultColor = rootStyles.getPropertyValue('--activeNumColor')
+//☝🏽 Defined out of scope to avoid redefining when function is called
+function setDisplayColor(status) {
   const yeyColor = rootStyles.getPropertyValue(`--yeyNumColor`)
   const errorColor = rootStyles.getPropertyValue(`--errorNumColor`)
 
@@ -67,6 +95,10 @@ function changeDisplayColor(status) {
     case 'appError':
       guessStatus.classList.add('appError')
       root.style.setProperty('--activeNumColor', errorColor)
+      break
+
+    case 'active':
+      root.style.setProperty('--activeNumColor', defaultColor)
       break
 
     default:
